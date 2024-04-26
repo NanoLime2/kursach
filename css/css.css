@@ -1,0 +1,4980 @@
+﻿@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+@font-face {
+  font-family: "Alegreya";
+  src: url("fonts/Alegreya-VariableFont_wght.ttf");
+  font-family: "Bough";
+  src: url("fonts/Bough-Condensed.ttf");
+}
+
+
+/*Основа*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.droped_menu{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -450px;
+    left: 470px;
+    display: none;
+}
+.logo_menu{
+    width: 80%;
+    height: 80%;
+    display: none;
+}
+
+body{
+  margin:0;
+  padding:0;
+  background-position: center;
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+  text-align: center;
+  display: none;
+  top: -450px;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 370px;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  font-size: 25px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+.menu{
+    box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.75);
+    /*background: linear-gradient(202deg, rgba(85,208,111,1) 4%, rgba(118,205,130,1) 100%);*/
+    background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));
+    border-radius: 500px;
+    position: absolute;
+    width: 51%;
+    height: 50%;
+    left: 26%;
+}
+
+.bp-tygh-main-container--padding {
+  padding-bottom: 0;
+}
+
+
+    .footer_colum{
+        position: absolute;
+        top: 20%;
+        left: 1980px;
+        /*line-height: 60px;*/
+        line-height: 60px;
+    }
+
+    .footer_first_colum{
+        /*width: 250px;*/
+        width: 450px;
+        display: inline-block;
+    }
+
+    .footer_second_colum{
+        /*width: 250px;*/
+        width: 450px;
+        display: inline-block;
+    }
+
+    .footer_telephon{
+        display: inline-block;
+        line-height: 35px;
+    }
+
+    .footer_email{
+        line-height: 35px;
+        display: inline-block;
+        margin-left: 50px;
+    }
+
+    .footer_name_strong{
+        /*font-size: 20px;*/
+        font-size: 40px;
+        color: white;
+    }
+
+    .footer_name_no_strong{
+        position: relative;
+        /*font-size: 22px;*/
+        font-size: 42px;
+        font-weight: 500;
+        color: black;
+        top: 30px;
+    }
+
+    .footer_first_contaks{
+        position: absolute;
+        left: 680px;
+        top: 28%;
+    }
+
+/*Главная*/
+
+.background_glav_1{
+    top: 20px;
+    height: 1500px;
+}
+
+.background_glav_2{
+    position: relative;
+    top: -5px;
+    height: 1650px;
+}
+
+/*Главная-стрелочка*/
+.arrow-8 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 70%;
+    left: 47%;
+    margin: 30px auto 80px auto;
+}
+.arrow-8:before,
+.arrow-8:after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-left: 26px solid lightgreen;
+    border-bottom: 26px solid lightgreen;
+    animation: arrow-8 3s linear infinite;
+}
+.arrow-8:after {
+    animation: arrow-8 3s linear infinite -1.5s;
+}
+@keyframes arrow-8 {
+    0% {
+        opacity: 0;
+        transform: translate(0, -53px) rotate(-45deg);
+    }
+    10%, 90% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(-45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 53px) rotate(-45deg);
+    }
+}
+
+/*Главная-пингвин*/
+.penguin {
+  /* change code below */
+  --penguin-skin: black;
+  --penguin-belly: white;
+  --penguin-beak: orange;
+  /* change code above */
+
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: -9%;
+  width: 300px;
+  height: 300px;
+  top: -3100px;
+}
+
+.penguin-top {
+  top: 10%;
+  left: 25%;
+  background: var(--penguin-skin, gray);
+  width: 50%;
+  height: 45%;
+  border-radius: 70% 70% 60% 60%;
+}
+
+.penguin-bottom {
+  top: 40%;
+  left: 23.5%;
+  background: var(--penguin-skin, gray);
+  width: 53%;
+  height: 45%;
+  border-radius: 70% 70% 100% 100%;
+}
+
+.right-hand {
+  top: 5%;
+  left: 25%;
+  background: var(--penguin-skin, black);
+  width: 30%;
+  height: 60%;
+  border-radius: 30% 30% 120% 30%;
+  transform: rotate(130deg);
+  z-index: -1;
+  animation-duration: 2s;
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  transform-origin: 0% 0%;
+  animation-timing-function: linear;
+}
+
+.left-hand {
+  top: 0%;
+  left: 75%;
+  background: var(--penguin-skin, gray);
+  width: 30%;
+  height: 60%;
+  border-radius: 30% 30% 30% 120%;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.right-cheek {
+  top: 15%;
+  left: 35%;
+  background: var(--penguin-belly, white);
+  width: 60%;
+  height: 70%;
+  border-radius: 70% 70% 60% 60%;
+}
+
+.left-cheek {
+  top: 15%;
+  left: 5%;
+  background: var(--penguin-belly, white);
+  width: 60%;
+  height: 70%;
+  border-radius: 70% 70% 60% 60%;
+}
+
+.belly {
+  top: 60%;
+  left: 2.5%;
+  background: var(--penguin-belly, white);
+  width: 95%;
+  height: 100%;
+  border-radius: 120% 120% 100% 100%;
+}
+
+.right-feet {
+  top: 85%;
+  left: 60%;
+  background: var(--penguin-beak, orange);
+  width: 15%;
+  height: 30%;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(-80deg);
+  z-index: -2222;
+}
+
+.left-feet {
+  top: 85%;
+  left: 25%;
+  background: var(--penguin-beak, orange);
+  width: 15%;
+  height: 30%;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(80deg);
+  z-index: -2222;
+}
+
+.right-eye {
+  top: 45%;
+  left: 60%;
+  background: black;
+  width: 15%;
+  height: 17%;
+  border-radius: 50%;
+}
+
+.left-eye {
+  top: 45%;
+  left: 25%;
+  background: black;
+  width: 15%;
+  height: 17%;
+  border-radius: 50%;
+}
+
+.sparkle {
+  top: 25%;
+  left: 15%;
+  background: white;
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+}
+
+.blush-right {
+  top: 65%;
+  left: 15%;
+  background: pink;
+  width: 15%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.blush-left {
+  top: 65%;
+  left: 70%;
+  background: pink;
+  width: 15%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.beak-top {
+  top: 60%;
+  left: 40%;
+  background: var(--penguin-beak, orange);
+  width: 20%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.beak-bottom {
+  top: 65%;
+  left: 42%;
+  background: var(--penguin-beak, orange);
+  width: 16%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+
+.penguin * {
+  position: absolute;
+}
+.penguin {
+  animation-duration: 10s;
+  animation-name: loop;
+  animation-iteration-count: infinite;
+  transform-origin: 0% 0%;
+  animation-timing-function: linear;
+}
+
+@keyframes wave {
+  10% {
+    transform: rotate(110deg);
+  }
+  30% {
+    transform: rotate(130deg);
+  }
+  50% {
+    transform: rotate(110deg);
+  }
+  80% {
+    transform: rotate(130deg);
+  }
+  100% {
+    transform: rotate(110deg);
+  }
+}
+
+@keyframes loop {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(-10deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  75% {
+    transform: rotateY(10deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+/*Главная-контейнер*/
+.about_us{
+    position: absolute;
+    top: 150%;
+    left: 33%;
+}
+
+.about_us .about_us_test h2{
+    font-size: 37px;
+    max-width: 90%;
+    position: relative;
+    top: -400px;
+    left: -16%;
+    text-align: center;
+    border-radius: 50px;
+    padding: 3%;
+    text-align: justify;
+    background: #2f816a;
+    background: -webkit-linear-gradient(to top right, #2f816a 25%, #3ba78e 100%);
+    background: -moz-linear-gradient(to top right, #2f816a 25%, #3ba78e 100%);
+    background: linear-gradient(to top right, #2f816a 25%, #3ba78e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Bough';
+    box-shadow: 0 0px 8px #000;
+}
+
+.about_us .p{
+    position: absolute;
+}
+
+.about_us img{
+    position: relative;
+    top: -250px;
+    left: -220px;
+}
+
+.info_of_school{
+    position: absolute;
+    top: 200%;
+    left: 20%;
+}
+
+.info_of_school .school_img{
+    display: inline-block;
+    width: 600px;
+    height: 400px;
+}
+
+.info_of_school .school_text{
+    display: inline-block;
+    font-size: 25px;
+    max-width: 88%;
+    padding: 80px;
+    position: relative;
+    top: -100px;
+    text-align: justify;
+    /*max-width: 45%;*/
+}
+
+.info_of_school_2{
+    position: absolute;
+    left: 20%;
+    top: 265%;
+}
+
+.info_of_school_2 .school_img_2{
+    display: inline-block;
+    width: 600px;
+    height: 400px;
+}
+
+.info_of_school_2 .school_text_2{
+    display: inline-block;
+    font-size: 25px;
+    max-width: 88%;
+    padding: 80px;
+    position: relative;
+    top: -100px;
+    text-align: justify;
+}
+
+.info_of_school_3{
+    position: absolute;
+    left: 20%;
+    top: 325%;
+}
+
+.info_of_school_3 .school_img_3{
+    display: inline-block;
+    width: 600px;
+    height: 400px;
+}
+
+.info_of_school_3 .school_text_3{
+    display: inline-block;
+    font-size: 25px;
+    max-width: 88%;
+    padding: 80px;
+    position: relative;
+    top: -100px;
+    text-align: justify;
+}
+
+/*Главная-слайдер*/
+.slider_glav {
+  position: absolute;
+  top: 385%;
+  left: 35%;
+  width: 680px;
+  margin: 50px auto;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.slider_glav input[name="switch"] {
+  display: none;
+}
+
+.switch {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  text-align: center;
+  width: 100%;
+}
+
+.switch label {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  margin: 0 3px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+  border-radius: 50%;
+  border: 5px solid #2f363c;
+  background-color: #738290;
+}
+
+#btn1:checked~.switch label[for="btn1"] {
+  background-color: white;
+}
+
+#btn2:checked~.switch label[for="btn2"] {
+  background-color: white;
+}
+
+#btn3:checked~.switch label[for="btn3"] {
+  background-color: white;
+}
+
+.slider-inner {
+  overflow: hidden;
+}
+
+.slides {
+  width: 300%;
+  transition: all 0.5s;
+}
+
+.slides img {
+  width: 680px;
+  height: 340px;
+  float: left;
+}
+
+#btn1:checked~slider-inner slides {
+  transform: translate(0);
+}
+
+#btn2:checked~.slider-inner .slides {
+  transform: translate(-680px);
+}
+
+#btn3:checked~.slider-inner .slides {
+  transform: translate(-1360px);
+}
+
+/*Главная-Fotter*/
+
+.footer_glav{
+    position: absolute;
+    top: 4200px;
+    font-size: 20px;
+    width: 100%;
+    height: 20%;
+    color: black;
+    box-shadow: 0 0px 8px #000;
+    background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));
+    text-align: justify;
+}
+
+.footer_glav a{
+    color: black;
+}
+
+
+
+/*Учителя*/
+
+.background_teachers_1{
+    top: 20px;
+    height: 1500px;
+}
+
+.background_teachers_2{
+    position: relative;
+    top: -5px;
+    height: 2000px;
+}
+
+.background_teachers_3{
+    position: relative;
+    top: -10px;
+    height: 400px;
+}
+
+.teachers{
+    position: relative;
+    width: 25%;
+    height: 10%;
+    left: 3%;
+    top: -2750px;
+}
+
+.teachers a{
+    color: black;
+}
+
+.container_teachers .teachers p{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.teachers_name_no_strong{
+    font-size: 18px;
+    color: gray;
+}
+
+.teachers_name_strong{
+    font-size: 26px;
+}
+
+.teachers_consist_list{
+    position: absolute;
+    font-size: 60px;
+    top: 20%;
+    left: 1650px;
+}
+
+.teachers_first_line{
+    position: relative;
+    top: -850px;
+}
+
+.teachers_second_line{
+    position: relative;
+    top: -200px;
+}
+
+.teachers_third_line{
+    position: relative;
+    top: 450px;
+}
+
+.no_tablet_information{
+    display: block;
+}
+.tablet_more_information{
+    display: none;
+}
+.tablet_many_information{
+    display: none;
+}
+.many_button{
+    display: none;
+}
+
+/*Список_учителей-Учителя*/
+/*Информатика*/
+.teachers_informatick{
+    position: absolute;
+    width: 60%;
+    left: 70%;
+    transition: .5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.container_teachers .teachers_informatick:hover{
+    transform: scale(1.1);
+}
+
+/*Литература*/
+.teachers_literature{
+    position: absolute;
+    width: 60%;
+    left: 160%;
+    transition: .5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.container_teachers .teachers_literature:hover{
+    transform: scale(1.1);
+}
+
+/*Математика*/
+.teachers_math{
+    position: absolute;
+    width: 60%;
+    left: 250%;
+    transition: .5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.container_teachers .teachers_math:hover{
+    transform: scale(1.1);
+}
+
+
+/*Биология*/
+.container_teachers .teachers .teachers_biologie{
+    position: absolute;
+    width: 60%;
+    top: -680%;
+    left: 70%;
+    transition: .5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.container_teachers .teachers_biologie:hover{
+    transform: scale(1.1);
+}
+
+/*Английский*/
+.container_teachers .teachers .teachers_english{
+    position: absolute;
+    width: 60%;
+    top: -680%;
+    left: 160%;
+    transition: .5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.container_teachers .teachers_english:hover{
+    transform: scale(1.1);
+}
+
+/*Физика*/
+.container_teachers .teachers .teachers_phisiks{
+    position: absolute;
+    width: 60%;
+    top: -680%;
+    left: 250%;
+    transition: .5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.container_teachers .teachers_phisiks:hover{
+    transform: scale(1.1);
+}
+
+/*Русский*/
+.container_teachers .teachers .teachers_russia{
+    position: absolute;
+    width: 60%;
+    top: -570%;
+    left: 70%;
+    transition: .5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.container_teachers .teachers_russia:hover{
+    transform: scale(1.1);
+}
+
+/*Спорт*/
+.container_teachers .teachers .teachers_sport{
+    position: absolute;
+    width: 60%;
+    top: -570%;
+    left: 160%;
+    transition: .5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.container_teachers .teachers_sport:hover{
+    transform: scale(1.1);
+}
+
+/*Директор-Учителя*/
+.director{
+    position: absolute;
+    width: 17%;
+    height: 45%;
+    top: 280%;
+    left: 20%;
+}
+
+.director_images{
+    position: absolute;
+    display: inline-block;
+}
+
+.director img{
+    border-radius: 30px;
+}
+
+.director_contaks{
+    position: absolute;
+    display: inline-block;
+    top: 15%;
+    left: 115%;
+    width: 120%;
+    font-size: 21px;
+}
+
+.director_contaks p{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.director_contaks .director_name{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.director_contaks .director_gray{
+    color: gray;
+}
+
+.director_contaks .director_strong{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.director_contaks .director_no_strong{
+    color: gray;
+}
+
+
+.director_information{
+    position: absolute;
+    display: inline-block;
+    left: 250%;
+    max-width: 145%;
+    font-size: 20px;
+    width: 350%;
+    text-align: center;
+    top: 15%;
+}
+
+.director_information p{
+    line-height: 27px;
+}
+/*Директор_Кнопка_записаться-Учителя*/
+.btn{
+    margin-top: 85%;
+    margin-left: 10%;
+    position: relative;
+    background: blue;
+    color: white;
+    font-size: 17px;
+    width: 220px;
+    height: 40px;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+    transition: 0.5s;
+}
+
+.btn:hover{
+    scale: 1.1;
+}
+
+.upr_school{
+    position: absolute;
+    font-size: 60px;
+    top: 255%;
+    left: 40%;
+}
+
+/*Слайдер-Учителя*/
+.teachers_last_news{
+    position: absolute;
+    font-size: 60px;
+    top: 345%;
+    left: 40%;
+}
+
+.teachers_news_slider{
+    position: absolute;
+    left: 48%;
+    top: 355%;
+}
+
+#slideshow {
+	margin: 0 auto;
+	padding-top: 70px;
+	height: 600px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.slideshow-title {
+	font-family: 'Allerta Stencil';
+	font-size: 62px;
+	color: #99ffcc;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 25%;
+	letter-spacing: 3px;
+	font-weight: 300;
+}
+
+.sub-heading {
+	padding-top: 50px;
+	font-size: 18px;
+} .sub-heading-two {
+	font-size: 15px;
+} .sub-heading-three {
+	font-size: 13px;
+} .sub-heading-four {
+	font-size: 11px;
+} .sub-heading-five {
+	font-size: 9px;
+} .sub-heading-six {
+	font-size: 7px;
+} .sub-heading-seven {
+	font-size: 5px;
+} .sub-heading-eight {
+	font-size: 3px;
+} .sub-heading-nine {
+	font-size: 1px;
+}
+
+.entire-content {
+	margin: auto;
+	width: 190px;
+	perspective: 1000px;
+	position: relative;
+	padding-top: 80px;
+}
+
+.content-carrousel {
+	width: 100%;
+	position: absolute;
+	float: right;
+	animation: rotar 35s infinite linear;
+	transform-style: preserve-3d;
+}
+
+.content-carrousel:hover {
+	animation-play-state: paused;
+	cursor: pointer;
+}
+
+.content-carrousel figure {
+	width: 110%;
+	height: 180px;
+	border: 1px solid #3b444b;
+	overflow: hidden;
+	position: absolute;
+}
+
+.content-carrousel figure:nth-child(1) {
+	transform: rotateY(0deg) translateZ(300px);
+} .content-carrousel figure:nth-child(2) {
+	transform: rotateY(40deg) translateZ(300px);
+} .content-carrousel figure:nth-child(3) {
+	transform: rotateY(80deg) translateZ(300px);
+} .content-carrousel figure:nth-child(4) {
+	transform: rotateY(120deg) translateZ(300px);
+} .content-carrousel figure:nth-child(5) {
+	transform: rotateY(160deg) translateZ(300px);
+} .content-carrousel figure:nth-child(6) {
+	transform: rotateY(200deg) translateZ(300px);
+} .content-carrousel figure:nth-child(7) {
+	transform: rotateY(240deg) translateZ(300px);
+} .content-carrousel figure:nth-child(8) {
+	transform: rotateY(280deg) translateZ(300px);
+} .content-carrousel figure:nth-child(9) {
+	transform: rotateY(320deg) translateZ(300px);
+} .content-carrousel figure:nth-child(10) {
+	transform: rotateY(360deg) translateZ(300px);
+}
+
+.shadow {
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px #000;
+    border-radius: 1px;
+}
+
+.content-carrousel img {
+	image-rendering: auto;
+	transition: all 300ms;
+	width: 100%;
+	height: 100%;
+}
+
+.content-carrousel img:hover {
+	transform: scale(1.2);
+	transition: all 300ms;
+}
+
+@keyframes rotar {
+	from {
+		transform: rotateY(0deg);
+	} to {
+		transform: rotateY(360deg);
+	}
+}
+/*Учитель_информатики_информация-Учителя*/
+
+.teachers_info_img{
+    position: absolute;
+    width: 20%;
+    height: 60%;
+    border-radius: 50px;
+    top: 20%;
+    left: 15%;
+}
+
+
+.teachers_infomation_name{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.teachers_infomation_dispec{
+    color: gray;
+}
+
+.teachers_infomation_predmet{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.teachers_information_biography_name{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    width: 70%;
+    text-align: center;
+}
+
+.teachers_information_biography_texts{
+    max-width: 65%;
+    font-size: 18px;
+    width: 350%;
+    color: gray;
+}
+
+.container_teachers_information{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    font-size: 18px;
+}
+
+.container_teachers_information p{
+    line-height: 26px;
+}
+
+.teachers_infomation_predmet_lists{
+    position: relative;
+    margin: 5px;
+    left: 5px;
+}
+
+.container_teachers_information_biography{
+    position: absolute;
+    left: 2500px;
+    top: 27%;
+    line-height: 25px;
+    width: 900px;
+}
+
+
+
+.teachers_information_biography_texts{
+    position: relative;
+    left: 25px;
+}
+
+
+.background_teachers_information{
+    top: 20px;
+    height: 1700px;
+}
+
+.teachers_enother{
+    position: relative;
+    width: 25%;
+    height: 10%;
+    top: -600px;
+    margin-bottom: 50px;
+}
+
+.teachers_enother img{
+    border-radius: 50px;
+}
+
+.teachers_enother p{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+.teachers_enother_first{
+    position: absolute;
+    width: 60%;
+    left: 70%;
+    transition: .5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+    border-radius: 50px;
+}
+
+.teachers_enother_first:hover{
+    transform: scale(1.1);
+}
+
+
+.teachers_enother_second{
+    position: absolute;
+    width: 60%;
+    left: 140%;
+    transition: .5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+    border-radius: 50px;
+}
+
+.teachers_enother_second:hover{
+    transform: scale(1.1);
+}
+
+.teachers_enother_third{
+    position: absolute;
+    width: 60%;
+    left: 210%;
+    transition: .5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+    border-radius: 50px;
+}
+
+.teachers_enother_third:hover{
+    transform: scale(1.1);
+}
+
+.teachers_enother_four{
+    position: absolute;
+    width: 60%;
+    left: 280%;
+    transition: .5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+    border-radius: 50px;
+}
+
+.teachers_enother_four:hover{
+    transform: scale(1.1);
+}
+
+
+.teachers_enother_predmet{
+    font-size: 18px;
+    color: gray;
+}
+
+.teachers_enother_name{
+    font-size: 23px;
+}
+
+.teachers_enother_texts{
+    font-size: 50px;
+    position: absolute;
+    top: 100%;
+    left: 45%;
+}
+
+.footer_teachers_information{
+    position: absolute;
+    top: 1700px;
+    font-size: 20px;
+    width: 100%;
+    height: 20%;
+    color: black;
+    box-shadow: 0 0px 8px #000;
+    background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));
+    text-align: justify;
+}
+
+.footer_teachers_information a{
+    color: black;
+}
+
+.teachers_enother a{
+    color: black;
+}
+
+/*Fotter-Учителя*/
+.footer_teachers{
+    position: absolute;
+    top: 3800px;
+    font-size: 20px;
+    width: 100%;
+    height: 20%;
+    color: black;
+    box-shadow: 0 0px 8px #000;
+    background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));
+    text-align: justify;
+}
+
+.footer_teachers a{
+    color: black;
+}
+
+/*Новости-информация о каждой новости*/
+
+.background_news_information{
+    height: 1900px;
+}
+
+.news_info_img{
+    position: absolute;
+    width: 20%;
+    height: 60%;
+    border-radius: 50px;
+    top: 20%;
+    left: 15%;
+}
+
+
+.news_infomation_name{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.news_infomation_dispec{
+    color: gray;
+}
+
+.news_information_event_name{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    width: 70%;
+    text-align: center;
+}
+
+.news_information_event_texts{
+    max-width: 65%;
+    font-size: 18px;
+    width: 350%;
+    color: gray;
+}
+
+.container_news_information{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    font-size: 18px;
+}
+
+.container_news_information p{
+    line-height: 26px;
+}
+
+.container_news_information_event{
+    position: absolute;
+    left: 64%;
+    top: 27%;
+    line-height: 25px;
+}
+
+
+/* Cам слайдер */
+.slider{
+    top: 120%;
+    left: 42%;
+    max-width: 60%;
+    position: absolute;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 15px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+    object-fit: cover;
+    position: absolute;
+    width: 140%;
+    border-radius: 30px;
+    height: 500px;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 80%;
+    width: auto;
+    margin-top: -22px;
+    color: orange;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: -40%;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    background: lightgray;
+}
+/* Заголовок слайда */
+/*.slideText {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Выравнивание текста по горизонтали и по вертикали
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Тень
+    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}*/
+/* Кружочки
+.slider-dots {
+    text-align: center;
+}
+.slider-dots_item{
+    position: relative;
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    top: 30%;
+    right: 30%;
+    margin: 0 2px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}*/
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.news_photo{
+    font-size: 50px;
+    position: absolute;
+    top: 105%;
+    left: 46%;
+}
+
+
+.news_information_event_texts{
+    position: relative;
+    left: 25px;
+}
+
+#t_r{
+    display: block;
+}
+
+.footer_news_information_block{
+    position: absolute;
+    top: 1800px;
+    font-size: 20px;
+    width: 100%;
+    height: 20%;
+    color: black;
+    box-shadow: 0 0px 8px #000;
+    background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));
+    text-align: justify;
+}
+
+.footer_news_information_block a{
+    color: black;
+}
+
+/*Программа*/
+
+.background_programa_1{
+    top: 20px;
+    height: 1200px;
+}
+
+.programa_director{
+    position: absolute;
+    width: 17%;
+    height: 45%;
+    top: 20%;
+    left: 25%;
+}
+
+.programa_director_images{
+    position: absolute;
+    display: inline-block;
+}
+
+.programa_director img{
+    border-radius: 30px;
+}
+
+
+.programa_director_information{
+    position: absolute;
+    display: inline-block;
+    left: 150%;
+    max-width: 175%;
+    font-size: 20px;
+    width: 350%;
+    text-align: center;
+    top: 15%;
+}
+
+.programa_director_information p{
+    line-height: 27px;
+}
+
+.img_button{
+    position: absolute;
+    width: 25%;
+    height: 15%;
+    top: 135%;
+    left: 128%;
+}
+
+.button{
+    position: absolute;
+    top: 145%;
+    left: 100%;
+    font-size: 30px;
+}
+
+.select_class{
+    background: white;
+    width: 250%;
+    height: 50px;
+    border-radius: 10px;
+    color: black;
+    background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));
+}
+
+#second_button{
+    display: none;
+}
+
+.select_class_button{
+    position: absolute;
+    width: 250%;
+    color: black;
+    top: 145%;
+    left: 60%;
+}
+
+.nine_class{
+    display: inline-block;
+    width: 20%;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.ten_class{
+    display: inline-block;
+    width: 20%;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.eleven_class{
+    display: inline-block;
+    width: 20%;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.nine_class:hover,
+.ten_class:hover,
+.eleven_class:hover{
+    background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));
+}
+
+table{
+    position: absolute;
+    top: 180%;
+    left: -50%;
+    width: 1200px;
+    box-shadow: 0 0px 8px #000;
+}
+
+.program_td_month{
+    padding: 5px;
+    width: 30px;
+}
+
+td a{
+    color: black;
+}
+
+td{
+    text-align: center;
+    color: black;
+    padding: 5px;
+}
+
+td:hover{
+    background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));
+}
+
+.allowed_img{
+    width: 30px;
+    padding: 5px;
+}
+
+.programa_table_class{
+    display: none;
+}
+
+.footer_programa{
+    position: absolute;
+    top: 2100px;
+    font-size: 20px;
+    width: 100%;
+    height: 20%;
+    color: black;
+    box-shadow: 0 0px 8px #000;
+    background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));
+    text-align: justify;
+}
+
+.footer_programa a{
+    color: black;
+}
+
+/*Feedback*/
+.login-box {
+  position: absolute;
+  top: 500px;
+  left: 51%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+/*Feedback_footer*/
+.footer_feedback{
+    position: absolute;
+    top: 1100px;
+    font-size: 20px;
+    width: 100%;
+    height: 20%;
+    color: black;
+    box-shadow: 0 0px 8px #000;
+    background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));
+    text-align: justify;
+}
+
+.footer_feedback a{
+    color: black;
+}
+/*Новости*/
+
+/*Адаптация под 2к разрешение (2560x1440)*/
+
+@media screen and (max-width: 3840px) {
+    .header{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+        /*box-shadow: 0 5px 10px #000;*/
+        /*background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));*/
+    }
+
+    .header .news,
+    .header .feedback,
+    .header .home{
+        position: relative;
+        left: -575px;
+    }
+
+    .header .logo{
+        transition: .5s;
+    }
+
+    .header .logo:hover{
+        transform: scale(1.2);
+    }
+
+    .header nav ul li{
+        position relative;
+        float: left;
+    }
+
+    .header nav ul li a{
+        /*left: -165%;
+        font-size: 21px;*/
+        position: relative;
+        left: -575px;
+        padding: 15px;
+        margin: 70px;
+        color: black;
+        font-size: 50px;
+        display: block;
+        font-weight: 500;
+    }
+
+    .header nav ul li a:hover{
+        border-radius: 50px;
+        background: linear-gradient(202deg, rgba(242,182,109,1) 29%, rgba(171,128,63,1) 71%);
+        color: #fff;
+    }
+
+    /*Главная*/
+    .background_glav_3{
+        position: relative;
+        top: -10px;
+        height: 1500px;
+    }
+    .background_glav_4{
+        position: relative;
+        top: -15px;
+        height: 300px;
+    }
+    .menu{
+        width: 50.5%;
+        left: 29%;
+    }
+    .arrow-8 {
+        top: 80%;
+        left: 48%;
+    }
+    .penguin {
+      width: 500px;
+      height: 500px;
+      top: -4900px;
+    }
+    .about_us{
+        top: 130%;
+        left: 24%;
+    }
+    .about_us .about_us_test h2{
+        font-size: 45px;
+        max-width: 50%;
+        top: -450px;
+        left: 10%;
+    }
+    .info_of_school{
+        top: 200%;
+        left: 30%;
+    }
+    .info_of_school .school_img{
+        width: 800px;
+        height: 500px;
+    }
+
+    .info_of_school .school_text{
+        font-size: 30px;
+        top: -150px;
+    }
+    .info_of_school_2{
+        top: 245%;
+        left: 30%;
+    }
+    .info_of_school_2 .school_img_2{
+        width: 800px;
+        height: 500px;
+    }
+
+    .info_of_school_2 .school_text_2{
+        font-size: 30px;
+        top: -150px;
+    }
+    .info_of_school_3{
+        top: 290%;
+        left: 30%;
+    }
+    .info_of_school_3 .school_img_3{
+        width: 800px;
+        height: 500px;
+    }
+
+    .info_of_school_3 .school_text_3{
+        font-size: 30px;
+        top: -150px;
+    }
+    .slider_glav{
+        top: 6000px;
+        left: 45%;
+    }
+    .footer_glav{
+        top: 7000px;
+    }
+
+/*Fotter*/
+    /*Новости*/
+    .background_news_1{
+        top: 20px;
+        height: 1500px;
+    }
+
+    .background_news_2{
+        position: relative;
+        top: -5px;
+        height: 1900px;
+    }
+    /*его вообще нет при full hd*/
+    .background_news_3{
+        position: relative;
+        top: -10px;
+        height: 1200px;
+    }
+    .news_zag {
+        position: absolute;
+        font-size: 60px;
+        top: 450px;
+        left: 1810px;
+    }
+    /*Ее вообще нет при full hd*/
+    .news_first_page{
+        position: relative;
+        left: 500px;
+        top: -4400px;
+        width: 75%;
+    }
+
+    .container_news .news_01{
+        position: absolute;
+        /*top: 430px;*/
+        top: 430px;
+        left: 27%;
+    }
+
+    .container_news .news_02{
+        position: absolute;
+        /*top: 930px;*/
+        top: 1130px;
+        left: 27%;
+    }
+
+    .container_news .news_03{
+        position: absolute;
+        /*top: 1430px;*/
+        top: 1830px;
+        left: 27%;
+    }
+
+    .container_news .news_04{
+        position: absolute;
+        /*top: 1930px;*/
+        top: 2530px;
+        left: 27%;
+    }
+
+    .container_news .news_05{
+        position: absolute;
+        /*top: 2430px;*/
+        top: 3230px;
+        left: 27%;
+    }
+
+    .container_news .news_image{
+        position: relative;
+        top: 20px;
+        left: -30px;
+        /*width: 400px;
+        height: 400px;*/
+        width: 600px;
+        height: 600px;
+        border-radius: 50px;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+    }
+
+
+    .container_news .news_texts{
+        position: absolute;
+        left: 110%;
+        /*max-width: 530px;*/
+        max-width: 560px;
+        width: 150%;
+        top: 5%;
+    }
+
+    .container_news .news_list{
+        /*font-size: 20px;*/
+        font-size: 25px;
+        background: red;
+        color: white;
+        border-radius: 50px;
+        text-align: center;
+        /*width: 20%;*/
+        width: 25%;
+        /*padding: 4px 4px*/
+        padding: 6px 6px;
+    }
+
+    .container_news .news_data{
+        font-size: 25px;
+        /*font-size: 0px*/
+        color: gray;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .container_news p{
+        line-height: 23px;
+        text-align: justify;
+    }
+
+    .container_news .news_name{
+        /*font-size: 40px;*/
+        font-size: 50px;
+        color: SteelBlue;
+    }
+
+    .container_news .news_opis{
+        /*font-size: 0px;*/
+        font-size: 21px;
+        /*line-height: 0px;*/
+        line-height: 35px;
+        color: gray;
+    }
+
+    .container_news .news_page{
+        position: relative;
+        top: -100px;
+        left: 40%;
+        width: 30%;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .container_news .news_page div{
+        display: inline-block;
+    }
+    button{
+        position: relative;
+        border: 2px solid lightgray;
+        border-radius: 50%;
+        /*width: 50px;
+        height: 50px;
+        font-size: 23px;
+        top: 0px;*/
+        width: 75px;
+        height: 75px;
+        background: none;
+        font-size: 33px;
+        font-weight: bold;
+        display: inline-block;
+        display: block;
+        top: -200px;
+        left: -150px;
+    }
+
+    #n_b_1{
+        display: block;
+        background: yellow;
+    }
+
+    #n_f_p{
+        display: block;
+    }
+
+    #n_s_p{
+        display: none;
+    }
+
+    #n_t_p{
+        display: none;
+    }
+    /*Fotter-Новости*/
+    .footer_news_block{
+        position: absolute;
+        /*top: 3100px;
+        font-size: 20px;*/
+        top: 4600px;
+        font-size: 35px;
+        width: 100%;
+        height: 20%;
+        color: black;
+        box-shadow: 0 0px 8px #000;
+        background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));
+        text-align: justify;
+    }
+
+    .footer_news_block a{
+        color: black;
+    }
+    /*Блок о каждой новости*/
+
+
+    /*О каждой новости*/
+    .news_infomation_name{
+        font-size: 30px;
+    }
+    .news_information_event_name{
+        position: relative;
+        font-size: 32px;
+        left: -200px;
+    }
+
+    .news_information_event_texts{
+        font-size: 20px;
+        max-width: 40%;
+    }
+
+    .container_news_information{
+        font-size: 20px;
+    }
+
+    .news_photo{
+        font-size: 60px;
+        top: 100%;
+        left: 50%;
+    }
+
+    .container_news_information_event{
+        position: absolute;
+        left: 64%;
+        top: 27%;
+        line-height: 25px;
+    }
+    .slider{
+        left: 1750px;
+        top: 110%;
+    }
+    .slider .item img {
+        width: 200%;
+        height: 800px;
+    }
+    .slider .prev, .slider .next {
+        top: 125%;
+        font-size: 60px;
+    }
+    .slider .next {
+        right: -100%;
+        border-radius: 3px 0 0 3px;
+    }
+    .footer_news_information_block{
+        top: 3000px;
+        font-size: 20px;
+        width: 100%;
+        height: 20%;
+        color: black;
+        box-shadow: 0 0px 8px #000;
+        background: linear-gradient(225deg, rgb(40, 193, 158), rgb(159, 230, 232), rgb(10, 122, 112));
+        text-align: justify;
+    }
+
+    .footer_news_information_block a{
+        color: black;
+    }
+    .background_news_information_2{
+        position: relative;
+        top: -10px;
+        height: 1200px;
+    }
+    .no_tablet_information{
+        display: block;
+    }
+    .tablet_more_information{
+        display: none;
+    }
+    .tablet_many_information{
+        display: none;
+    }
+    .background_teachers_4{
+        position: relative;
+        top: -15px;
+        height: 2500px;
+    }
+    .upr_school{
+        top: 220%;
+        left: 1650px;
+    }
+    .director{
+        top: 230%;
+    }
+    .director_information{
+        font-size: 20px;
+        width: 100%;
+    }
+    .director_contaks{
+        left: 1000px;
+    }
+    .btn{
+        position: absolute;
+        top: -150%;
+        left: -75px;
+    }
+    .teachers_last_news{
+        top: 295%;
+        left: 1700px;
+    }
+    .teachers_news_slider{
+        top: 300%;
+    }
+    .footer_teachers{
+        top: 6300px;
+    }
+    /*Страница о каждом учителе*/
+
+    .background_teachers_information_2{
+        position: relative;
+        top: -10px;
+        height: 1500px;
+    }
+    .background_teachers_information_3{
+        position: relative;
+        top: -15px;
+        height: 500px;
+    }
+    .container_teachers_information{
+        left: 1700px;
+    }
+    .container_teachers_information_biography{
+        left: 2400px
+    }
+
+    .teachers_enother_texts{
+        top: 95%;
+    }
+    .teachers_enother{
+        position: absolute;
+        top: 105%;
+    }
+    .footer_teachers_information{
+        top: 3500px;
+    }
+    /*program*/
+    .programa_director .programa_director_information{
+        max-width: 90%;
+        top: 30%;
+    }
+    .background_programa_2{
+        position: relative;
+        top: -10px;
+        height: 1500px;
+    }
+    .first_button{
+        position: relative;
+        top: 1400px;
+        left: 200px;
+    }
+    .select_class_button{
+        left: 550px;
+        top: 1500px;
+    }
+    .img_button{
+        width: 25%;
+        left: 800px;
+    }
+    .programa_director{
+        left: 1100px;
+    }
+    table{
+        left: 300px;
+    }
+    #footer_programa{
+        top: 2700px;
+    }
+} /*50%*/
+
+@media screen and (max-width: 3300px) {
+    .header .news,
+    .header .feedback,
+    .header .home{
+        position: relative;
+        left: -500px;
+    }
+
+    .header nav ul li a{
+        left: -500px;
+        padding: 15px;
+        margin: 40px;
+        font-size: 40px;
+    }
+    .news_zag {
+        font-size: 60px;
+        left: 1250px;
+    }
+    .news_first_page{
+        left: 200px;
+    }
+
+    .footer_colum{
+        left: 1100px;
+    }
+
+    .footer_name_strong{
+        font-size: 30px;
+    }
+
+    .footer_name_no_strong{
+        font-size: 35px;
+    }
+
+    .footer_first_contaks{
+        position: absolute;
+        left: 280px;
+        top: 28%;
+    }
+    /*Блок о каждой новости*/
+
+    /*О каждой новости*/
+    .news_infomation_name{
+        font-size: 30px;
+    }
+    .news_information_event_name{
+        position: relative;
+        font-size: 32px;
+        left: -200px;
+    }
+
+    .news_information_event_texts{
+        font-size: 20px;
+        max-width: 60%;
+    }
+
+    .container_news_information{
+        font-size: 20px;
+    }
+
+    .news_photo{
+        font-size: 60px;
+        top: 100%;
+        left: 45%;
+    }
+
+    .container_news_information_event{
+        position: absolute;
+        left: 64%;
+        top: 27%;
+        line-height: 25px;
+    }
+    .slider{
+        left: 1225px;
+        top: 110%;
+    }
+    .slider .item img {
+        width: 150%;
+        height: 600px;
+    }
+    .slider .prev, .slider .next {
+        top: 90%;
+        font-size: 40px;
+    }
+    .slider .next {
+        right: -50%;
+        border-radius: 3px 0 0 3px;
+    }
+    .footer_news_information_block{
+        top: 2500px;
+        font-size: 20px;
+    }
+    .teachers_consist_list{
+        left: 1200px;
+    }
+    .teachers_first_line{
+        top: -2000px;
+    }
+    .teachers_second_line{
+        top: -1150px;
+    }
+    .teachers_third_line{
+        top: -250px;
+    }
+    .background_teachers_4{
+        position: relative;
+        top: -15px;
+        height: 1400px;
+    }
+    .upr_school{
+        top: 230%;
+        left: 1150px;
+    }
+    .director{
+        top: 250%;
+    }
+    .director_contaks{
+        left: 700px;
+    }
+    .btn{
+        position: absolute;
+        top: -70%;
+        left: -60px;
+    }
+    .teachers_last_news{
+        top: 315%;
+        left: 1250px;
+    }
+    .teachers_news_slider{
+        top: 320%;
+        left: 1375px;
+    }
+    .footer_teachers{
+        top: 5300px;
+    }
+    .background_teachers_information_2{
+        height: 1200px;
+    }
+    .background_teachers_information_3{
+        height: 0px;
+    }
+    .container_teachers_information{
+        left: 1200px;
+    }
+    .container_teachers_information_biography{
+        left: 1800px
+    }
+    .footer_teachers_information{
+        top: 2700px;
+    }
+    .background_news_information_2{
+        height: 800px;
+    }
+    /*Главная*/
+    .background_glav_3{
+        position: relative;
+        top: -10px;
+        height: 800px;
+    }
+    .background_glav_4{
+        height: 0px;
+    }
+    .menu{
+        width: 51%;
+        left: 27%;
+        height: 60%;
+    }
+    .penguin {
+      width: 400px;
+      height: 400px;
+      top: -3950px;
+    }
+    .about_us .about_us_test h2{
+        font-size: 40px;
+        max-width: 60%;
+        left: 6%;
+    }
+    .info_of_school{
+        left: 25%;
+    }
+    .info_of_school .school_img{
+        width: 700px;
+        height: 450px;
+    }
+    .info_of_school_2{
+        left: 25%;
+    }
+    .info_of_school_2 .school_img_2{
+        width: 700px;
+        height: 450px;
+    }
+    .info_of_school_3{
+        left: 25%;
+    }
+    .info_of_school_3 .school_img_3{
+        width: 700px;
+        height: 450px;
+    }
+    .slider_glav{
+        top: 4600px;
+        left: 40%;
+    }
+    .footer_glav{
+        top: 5500px;
+    }
+    .programa_director .programa_director_information{
+        max-width: 120%;
+        top: 20%;
+    }
+    .first_button{
+        position: relative;
+        top: 1100px;
+        left: 350px;
+    }
+    .select_class_button{
+        left: 440px;
+        top: 1175px;
+    }
+    .img_button{
+        width: 25%;
+        left: 800px;
+    }
+    .programa_director{
+        left: 700px;
+    }
+    table{
+        left: 50px;
+    }
+} /*60%*/
+
+
+@media screen and (max-width: 2560px) {
+    .header .news,
+    .header .feedback,
+    .header .home {
+            left: -400px;
+        }
+
+    .header nav ul li a{
+        /*left: -165%;
+        font-size: 21px;*/
+        left: -400px;
+        padding: 15px;
+        font-size: 35px;
+        margin: 35px;
+    }
+    .news_zag {
+        font-size: 60px;
+        left: 1125px;
+    }
+    /*Ее вообще нет при full hd*/
+
+    .news_first_page{
+        left: 50px;
+    }
+
+    .footer_colum{
+        left: 900px;
+        font-size: 23px;
+        line-height: 50px;
+        left: 800px;
+    }
+
+    .footer_name_strong{
+        font-size: 23px;
+    }
+
+    .footer_name_no_strong{
+        font-size: 25px;
+    }
+
+    .footer_first_contaks{
+        position: absolute;
+        left: 280px;
+        top: 28%;
+    }
+    .teachers_consist_list{
+        left: 1050px;
+    }
+    .teachers_first_line{
+        top: -1900px;
+    }
+    .teachers_second_line{
+        top: -1100px;
+    }
+        .teachers_third_line{
+        top: -300px;
+    }
+    .background_teachers_4{
+        position: relative;
+        top: -15px;
+        height: 1300px;
+    }
+    .upr_school{
+        top: 235%;
+        left: 1000px;
+    }
+    .director{
+        top: 255%;
+    }
+    .director_contaks{
+        left: 600px;
+    }
+    .director_information{
+        width: 120%;
+    }
+    .btn{
+        position: absolute;
+        top: -70%;
+        left: -60px;
+    }
+    .teachers_last_news{
+        top: 315%;
+        left: 1050px;
+    }
+    .teachers_news_slider{
+        top: 320%;
+        left: 1175px;
+    }
+    .footer_teachers{
+        top: 5200px;
+    }
+    .background_teachers_information_2{
+        height: 900px;
+    }
+    .container_teachers_information{
+        left: 1100px;
+    }
+    .container_teachers_information_biography{
+        left: 1400px
+    }
+    .footer_teachers_information{
+        top: 2500px;
+    }
+    .teachers_information_biography_name{
+        position: relative;
+        left: 250px;
+    }
+    .teachers_information_biography_texts{
+        left: 300px;
+    }
+    /*Главная*/
+    .background_glav_2{
+        top: -10px;
+        height: 2300px;
+    }
+    .background_glav_3{
+        height: 0px;
+    }
+    .background_glav_4{
+        height: 0px;
+    }
+    .menu{
+        width: 52%;
+        left: 28%;
+    }
+    .penguin {
+      width: 350px;
+      height: 350px;
+      top: -3800px;
+    }
+    .arrow-8{
+        top: 800px;
+    }
+    .about_us{
+        top: 150%;
+    }
+    .about_us .about_us_test h2{
+        font-size: 35px;
+        max-width: 60%;
+        left: 6%;
+    }
+    .info_of_school{
+        top: 200%;
+        left: 25%;
+    }
+    .info_of_school .school_img{
+        width: 600px;
+        height: 400px;
+    }
+    .info_of_school .school_text{
+        font-size: 24px;
+    }
+    .info_of_school_2{
+        top: 245%;
+        left: 25%;
+    }
+    .info_of_school_2 .school_img_2{
+        width: 600px;
+        height: 400px;
+    }
+    .info_of_school_2 .school_text_2{
+        font-size: 24px;
+        top: -80px;
+    }
+    .info_of_school_3{
+        top: 290%;
+        left: 25%;
+    }
+    .info_of_school_3 .school_img_3{
+        width: 600px;
+        height: 400px;
+    }
+    .info_of_school_3 .school_text_3{
+        font-size: 24px;
+        top: -80px;
+    }
+    .slider_glav{
+        top: 4700px;
+        left: 38%;
+        width: 680px;
+    }
+    .slides img {
+      width: 680px;
+      height: 300px;
+    }
+    .footer_glav{
+        top: 5210px;
+    }
+    .programa_director .programa_director_information{
+        max-width: 120%;
+        top: 20%;
+    }
+    .first_button{
+        position: relative;
+        top: 1000px;
+        left: 400px;
+    }
+    .select_class_button{
+        left: 410px;
+        top: 1060px;
+    }
+    .img_button{
+        width: 25%;
+        left: 800px;
+    }
+    .programa_director{
+        left: 600px;
+    }
+    table{
+        left: 50px;
+    }
+} /*75%*/
+
+@media screen and (max-width: 2460px) {
+    .teachers{
+        position: absolute;
+        top: 180%;
+    }
+    .teachers_consist_list{
+        left: 950px;
+    }
+    .teachers_second_line{
+        top: -900px;
+    }
+    .teachers_third_line{
+        top: -200px;
+    }
+    .upr_school{
+        top: 235%;
+        left: 950px;
+    }
+    .director{
+        top: 255%;
+    }
+    .director_contaks{
+        left: 500px;
+    }
+    .btn{
+        position: absolute;
+        top: -30%;
+        left: -60px;
+    }
+    .teachers_last_news{
+        top: 315%;
+        left: 950px;
+    }
+    .teachers_news_slider{
+        top: 320%;
+        left: 1100px;
+    }
+    .footer_teachers{
+        top: 4400px;
+    }
+    .background_teachers_3{
+        height: 100px;
+    }
+    .background_teachers_information_2{
+        height: 400px;
+    }
+    .container_teachers_information{
+        left: 1000px;
+    }
+    .container_teachers_information_biography{
+        left: 1250px
+    }
+    .container .container_teachers_information_biography{
+        width: 30%;
+    }
+    .teachers_information_biography_texts{
+        font-size: 22px;
+    }
+    .footer_teachers_information{
+        top: 2100px;
+    }
+    /*Главная*/
+    .background_glav_2{
+        top: -10px;
+        height: 2000px;
+    }
+    .background_glav_3{
+        height: 0px;
+    }
+    .background_glav_4{
+        height: 0px;
+    }
+    .menu{
+        width: 52.5%;
+        left: 25%;
+    }
+    .footer_glav{
+        top: 4840px;
+    }
+    .programa_director .programa_director_information{
+        max-width: 120%;
+        top: 20%;
+        font-size: 17px;
+    }
+    .first_button{
+        position: relative;
+        top: 950px;
+        left: 220px;
+    }
+    .select_class_button{
+        left: 400px;
+        top: 1010px;
+    }
+    .img_button{
+        width: 25%;
+        left: 600px;
+    }
+    .programa_director{
+        left: 650px;
+    }
+    table{
+        left: -50px;
+    }
+}/*80%*/
+
+
+@media screen and (max-width: 2260px) {
+    .header .news,
+    .header .feedback,
+    .header .home {
+            left: -400px;
+        }
+
+    .header nav ul li a{
+        /*left: -165%;
+        font-size: 21px;*/
+        left: -400px;
+        padding: 10px;
+        font-size: 25px;
+        margin: 35px;
+    }
+    .background_news_3{
+        height: 0px;
+    }
+    .news_zag {
+        font-size: 60px;
+        left: 900px;
+    }
+    /*Ее вообще нет при full hd*/
+
+    .news_first_page{
+        left: 150px;
+        top: -3200px;
+    }
+    .container_news .news_02{
+        top: 930px;
+    }
+
+    .container_news .news_03{
+        top: 1430px;
+    }
+
+    .container_news .news_04{
+        top: 1930px;
+    }
+
+    .container_news .news_05{
+        top: 2430px;
+    }
+
+    .container_news .news_image{
+        width: 400px;
+        height: 400px;
+    }
+
+    .container_news .news_list{
+        font-size: 20px;
+        width: 20%;
+        padding: 4px 4px
+    }
+
+    .container_news .news_data{
+        font-size: 20px
+    }
+
+    .container_news .news_name{
+        font-size: 40px;
+    }
+
+    .container_news .news_opis{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        font-size: 23px;
+        top: -50px;
+    }
+    .footer_name_strong{
+        font-size: 20px;
+    }
+
+    .footer_name_no_strong{
+        font-size: 22px;
+        top: 5px;
+    }
+
+    .footer_first_contaks{
+        left: 240px;
+    }
+
+    .footer_news_block{
+        top: 3400px;
+        font-size: 20px;
+    }
+    .slider{
+        left: 875px;
+        top: 110%;
+    }
+    .news_information_event_name{
+        left: 5px;
+    }
+    .teachers{
+        position: absolute;
+        top: 205%;
+    }
+    .teachers_consist_list{
+        left: 800px;
+    }
+    .teachers_first_line{
+        top: -1700px;
+    }
+    .teachers_second_line{
+        top: -1050px;
+    }
+    .teachers_third_line{
+        top: -400px;
+    }
+    .background_teachers_4{
+        height: 0px;
+    }
+    .upr_school{
+        top: 235%;
+        left: 800px;
+    }
+    .director{
+        top: 255%;
+    }
+    .director_contaks{
+        left: 500px;
+    }
+    .btn{
+        position: absolute;
+        top: -30%;
+        left: -60px;
+    }
+    .teachers_last_news{
+        top: 315%;
+        left: 850px;
+    }
+    .teachers_news_slider{
+        top: 320%;
+        left: 1000px;
+    }
+    .footer_teachers{
+        top: 3900px;
+    }
+    .background_teachers_3{
+        height: 500px;
+    }
+    .container_teachers_information{
+        left: 900px;
+    }
+    .container_teachers_information_biography{
+        left: 1150px
+    }
+    .container .container_teachers_information_biography{
+        width: 30%;
+    }
+    .background_news_information_2{
+        height: 700px;
+    }
+    /*Главная*/
+    .background_glav_2{
+        top: -10px;
+        height: 1550px;
+    }
+    .menu{
+        width: 48.5%;
+        left: 28%;
+    }
+    .info_of_school,
+    .info_of_school_3{
+        left: 22%;
+    }
+    .info_of_school_2{
+        left: 18%;
+    }
+    .penguin {
+      width: 300px;
+      height: 300px;
+      top: -3050px;
+    }
+    .slider_glav{
+        top: 3500px;
+        left: 38%;
+        width: 680px;
+    }
+    .footer_glav{
+        top: 4200px;
+    }
+    .programa_director .programa_director_information{
+        max-width: 130%;
+        top: 19%;
+        font-size: 16px;
+    }
+    .first_button{
+        position: relative;
+        top: 720px;
+        left: 150px;
+    }
+    .select_class_button{
+        left: 360px;
+        top: 770px;
+    }
+    .img_button{
+        width: 25%;
+        left: 450px;
+    }
+    .programa_director{
+        left: 550px;
+    }
+    table{
+        left: -50px;
+    }
+    .background_programa_2{
+        height: 800px;
+    }
+    #footer_programa{
+        top: 2000px;
+    }
+} /*90%*/
+
+@media screen and (max-width: 1920px) {
+    .header .news,
+    .header .feedback,
+    .header .home {
+            left: -330px;
+        }
+
+    .header nav ul li a{
+        left: -330px;
+        padding: 10px;
+        font-size: 25px;
+    }
+    .news_zag {
+        font-size: 50px;
+        top: 300px;
+        left: 850px;
+    }
+
+    .news_first_page{
+        left: 100px;
+        top: -3400px;
+    }
+
+    .footer_colum{
+        left: 860px;
+        line-height: 30px;
+    }
+
+    .footer_first_colum{
+        /*width: 250px;*/
+        width: 250px;
+    }
+
+    .footer_second_colum{
+        width: 450px;
+    }
+    button{
+        top: -250px;
+        left: -50px;
+    }
+    /*Блок о каждой новости*/
+
+    /*О каждой новости*/
+    .news_infomation_name{
+        font-size: 25px;
+    }
+    .news_information_event_name{
+        font-size: 32px;
+        left: 0px;
+    }
+
+    .news_information_event_texts{
+        font-size: 20px;
+        max-width: 80%;
+    }
+
+    .news_photo{
+        font-size: 40px;
+        top: 100%;
+        left: 900px;
+    }
+
+    .slider{
+        left: 850px;
+    }
+    .slider .item img {
+        width: 100%;
+        height: 400px;
+    }
+    .slider .prev, .slider .next {
+        top: 65%;
+        font-size: 30px;
+    }
+    .slider .next {
+        right: 0%;
+    }
+    .footer_news_information_block{
+        top: 1800px;
+    }
+    .footer_colum{
+        line-height: 45px;
+        left: 800px;
+    }
+
+    .footer_news_information_block a{
+        color: black;
+    }
+    .background_news_information_2{
+        position: relative;
+        top: -10px;
+        height: 0px;
+    }
+    .teachers{
+        position: absolute;
+        top: 220%;
+    }
+    .teachers_consist_list{
+        left: 800px;
+        font-size: 50px;
+    }
+    .teachers_first_line{
+        top: -1675px;
+    }
+    .teachers_second_line{
+        top: -1050px;
+    }
+    .teachers_third_line{
+        top: -425px;
+    }
+    .upr_school{
+        top: 250%;
+        font-size: 50px;
+    }
+    .director{
+        top: 265%;
+    }
+    .director_contaks{
+        left: 450px;
+    }
+    .director_information{
+        left: 900px;
+    }
+    .btn{
+        position: absolute;
+        top: -20%;
+        left: -35px;
+    }
+    .background_teachers_2{
+        height: 2000px;
+    }
+    .teachers_last_news{
+        top: 330%;
+        left: 800px;
+        font-size: 50px;
+    }
+    .teachers_news_slider{
+        top: 335%;
+        left: 900px;
+    }
+    .footer_teachers{
+        top: 3900px;
+    }
+    .background_teachers_3{
+        height: 500px;
+    }
+    .container_teachers_information{
+        left: 800px;
+    }
+    .container_teachers_information_biography{
+        left: 1000px
+    }
+    .container .container_teachers_information_biography{
+        width: 40%;
+    }
+    .teachers_information_biography_texts{
+        font-size: 18px;
+    }
+    /*Главная*/
+    .background_glav_2{
+        top: -10px;
+        height: 1640px;
+    }
+    .menu{
+        width: 52.5%;
+        left: 25%;
+    }
+    .about_us img{
+        left: -150px;
+    }
+    .about_us .about_us_test h2{
+        top: -350px;
+        max-width: 70%;
+        left: 20px;
+    }
+    .info_of_school{
+        top: 220%;
+    }
+    .info_of_school_2{
+        top: 280%;
+    }
+    .info_of_school_3{
+        top: 340%;
+    }
+    .penguin {
+      width: 300px;
+      height: 300px;
+      top: -3150px;
+    }
+    .slider_glav{
+        top: 3650px;
+    }
+    .footer_glav{
+        top: 4210px;
+    }
+    .programa_director .programa_director_information{
+        max-width: 150%;
+        top: 10%;
+        font-size: 16px;
+    }
+    .programa_director{
+        left: 500px;
+    }
+    .first_button{
+        position: relative;
+        top: 850px;
+        left: 90px;
+    }
+    .select_class_button{
+        left: 245px;
+        top: 900px;
+    }
+    table{
+        left: -175px;
+    }
+    .background_programa_2{
+        height: 800px;
+    }
+    #footer_programa{
+        top: 2000px;
+    }
+} /*100%*/
+
+@media screen and (max-width: 1820px) {
+    .header .news,
+    .header .feedback,
+    .header .home {
+            left: -250px;
+        }
+    .header nav ul li a{
+        /*left: -165%;
+        font-size: 21px;*/
+        left: -250px;
+        padding: 10px;
+        margin: 30px;
+        font-size: 24px;
+    }
+
+    .footer_news_block{
+        top: 3350px;
+    }
+    .footer_colum{
+        line-height: 40px;
+    }
+    button{
+        top: -250px;
+        left: -50px;
+    }
+    /*Блок о каждой новости*/
+    .news_photo{
+        font-size: 40px;
+        top: 100%;
+        left: 750px;
+    }
+    .slider{
+        left: 700px;
+    }
+    .teachers{
+        position: absolute;
+        top: 240%;
+    }
+    .teachers_consist_list{
+        left: 700px;
+        font-size: 45px;
+    }
+    .teachers_first_line{
+        top: -1675px;
+    }
+    .teachers_second_line{
+        top: -1100px;
+    }
+    .teachers_third_line{
+        top: -525px;
+    }
+    .upr_school{
+        top: 260%;
+        font-size: 45px;
+        left: 700px;
+    }
+    .background_teachers_information_2{
+        height: 0px;
+    }
+    .container_teachers_information{
+        left: 700px;
+    }
+    .container_teachers_information_biography{
+        left: 850px;
+    }
+    .teachers_information_biography_texts{
+        font-size: 18px;
+    }
+    .container .container_teachers_information_biography{
+        width: 40%;
+    }
+    .teachers_enother_name{
+        font-size: 24px;
+    }
+    .footer_teachers_information{
+        top: 1700px;
+    }
+    /*Главная*/
+    .background_glav_2{
+        height: 1650px;
+    }
+    .menu{
+        width: 52.5%;
+        left: 27%;
+    }
+    .info_of_school,
+    .info_of_school_3{
+        left: 300px;
+    }
+    .info_of_school_2{
+        left: 220px;
+    }
+    .penguin {
+      width: 300px;
+      height: 300px;
+      top: -3150px;
+    }
+    .slider_glav{
+        top: 3350px;
+        left: 600px;
+    }
+    .footer_glav{
+        height: 220px;
+        top: 4100px;
+    }
+    .programa_director .programa_director_information{
+        max-width: 160%;
+        top: 10%;
+        font-size: 16px;
+    }
+    .img_button{
+        left: 350px;
+        top: 150%;
+    }
+    .first_button{
+        position: relative;
+        top: 850px;
+        left: 25px;
+    }
+    .select_class_button{
+        left: 225px;
+        top: 840px;
+    }
+    .programa_director{
+        left: 450px;
+    }
+    table{
+        left: -180px;
+    }
+    .background_programa_2{
+        height: 700px;
+    }
+    #footer_programa{
+        top: 1800px;
+    }
+} /*110%*/
+
+
+@media screen and (max-width: 1650px) {
+    .header nav ul li a{
+        font-size: 20px;
+    }
+        .news_zag {
+        font-size: 35px;
+        top: 200px;
+        left: 750px;
+    }
+
+    .background_news_2{
+        height: 1800px;
+    }
+
+    .news_first_page{
+        left: 20px;
+        top: -3400px;
+    }
+
+    .footer_first_colum{
+        display:inline-block;
+    }
+
+    .footer_second_colum{
+        display:inline-block;
+    }
+
+    .footer_news_block{
+        top: 3250px;
+    }
+
+    .footer_colum{
+        left: 1080px;
+        line-height: 28px;
+    }
+
+
+    .footer_name_strong{
+        font-size: 15px;
+    }
+
+    .footer_name_no_strong{
+        font-size: 20px;
+    }
+
+    .footer_first_contaks{
+        position: absolute;
+        left: 100px;
+        top: 28%;
+    }
+
+    .footer_colum{
+        font-size: 15px;
+        left: 500px;
+    }
+    /*Блок о каждой новости*/
+    .slider{
+        left: 650px;
+        top: 150%;
+    }
+    .slider .item img {
+        width: 100%;
+        height: 400px;
+    }
+    .slider .prev, .slider .next {
+        top: 60%;
+        font-size: 30px;
+    }
+    .slider .next {
+        right: 0%;
+    }
+    .news_photo{
+        font-size: 40px;
+        top: 135%;
+        left: 46%;
+    }
+    .news_information_event_texts{
+        font-size: 15px;
+        max-width: 80%;
+    }
+    .news_infomation_name{
+        font-size: 20px;
+    }
+    .news_information_event_name{
+        font-size: 28px;
+        left: 0px;
+    }
+    .teachers{
+        position: absolute;
+        top: 260%;
+    }
+    .teachers_consist_list{
+        left: 600px;
+        font-size: 45px;
+    }
+    .teachers_first_line{
+        top: -1625px;
+    }
+    .teachers_second_line{
+        top: -1100px;
+    }
+    .teachers_third_line{
+        top: -575px;
+    }
+    .upr_school{
+        font-size: 45px;
+        left: 600px;
+    }
+    .director{
+        top: 280%;
+        left: 300px;
+    }
+    .teachers_last_news{
+        top: 360%;
+        left: 700px;
+        font-size: 45px;
+    }
+    .director_contaks{
+        left: 350px;
+    }
+    .director .director_strong{
+        font-size: 20px;
+    }
+    .director_no_strong{
+        font-size: 18px;
+    }
+    .director_information{
+        left: 700px;
+        width: 150%;
+        font-size: 18px;
+    }
+    .teachers_news_slider{
+        top: 365%;
+        left: 675px;
+    }
+    .teachers_last_news{
+        left: 600px;
+    }
+    .footer_teachers{
+        top: 3400px;
+    }
+    .background_teachers_3{
+        height: 0px;
+    }
+   .background_teachers_information_2{
+        height: 0px;
+    }
+    .container_teachers_information{
+        left: 600px;
+        font-size: 14px;
+    }
+    .teachers_infomation_name,
+    .teachers_infomation_predmet{
+        font-size: 22px;
+    }
+    .container_teachers_information_biography{
+        left: 700px;
+    }
+    .teachers_information_biography_texts{
+        font-size: 15px;
+    }
+    .container .container_teachers_information_biography{
+        width: 40%;
+    }
+    .teachers_enother_texts{
+        font-size: 35px;
+    }
+    .footer_teachers_information{
+        top: 1700px;
+    }
+    /*Главная*/
+    .background_glav_2{
+        height: 1150px;
+    }
+    .about_us{
+        top: 160%;
+    }
+    .about_us .about_us_test h2{
+        left: -75px;
+        max-width: 80%;
+        font-size: 30px;
+    }
+    .arrow-8{
+        width: 75px;
+        height: 75px;
+    }
+    .info_of_school{
+        top: 220%;
+        left: 20%;
+    }
+
+    .info_of_school .school_img,
+    .info_of_school_2 .school_img_2,
+    .info_of_school_3 .school_img_3{
+        width: 500px;
+        height: 300px;
+    }
+
+    .info_of_school .school_text,
+    .info_of_school_2 .school_text_2,
+    .info_of_school_3 .school_text_3{
+        font-size: 20px;
+        max-width: 88%;
+        top: -100px;
+    }
+    .menu{
+        width: 53.5%;
+        left: 24%;
+    }
+    .info_of_school,
+    .info_of_school_3{
+        left: 300px;
+    }
+    .info_of_school_2{
+        left: 220px;
+    }
+    .penguin {
+      width: 200px;
+      height: 200px;
+      top: -2675px;
+    }
+    .slider_glav{
+        top: 2900px;
+        left: 500px;
+    }
+    .footer_glav{
+        height: 220px;
+        top: 3500px;
+    }
+    .programa_director .programa_director_information{
+        max-width: 190%;
+        top: 7%;
+        font-size: 15px;
+    }
+    .img_button{
+        left: 350px;
+        top: 150%;
+    }
+    .first_button{
+        position: relative;
+        top: 780px;
+        left: 50px;
+    }
+    .select_class_button{
+        left: 210px;
+        top: 770px;
+    }
+    .programa_director{
+        left: 325px;
+    }
+    table{
+        top: 200%;
+        left: -170px;
+    }
+    .background_programa_2{
+        height: 700px;
+    }
+    #footer_programa{
+        top: 1800px;
+    }
+} /*125%*/
+
+@media screen and (max-width: 1440px) {
+    .header .news,
+    .header .feedback,
+    .header .home {
+            left: -340px;
+        }
+
+    .header nav ul li a{
+        /*left: -165%;
+        font-size: 21px;*/
+        left: -340px;
+        padding: 7px;
+        font-size: 15px;
+        margin: 15px;
+    }
+
+    /*Главная*/
+    .background_glav_2{
+        height: 690px;
+    }
+    .about_us{
+        top: 180%;
+        left: 350px;
+    }
+    .about_us .about_us_test h2{
+        top: -300px;
+        left: -100px;
+        max-width: 80%;
+        font-size: 19px;
+    }
+    .arrow-8{
+        width: 90px;
+        height: 90px;
+        top: 40%;
+    }
+
+    .info_of_school .school_img,
+    .info_of_school_2 .school_img_2,
+    .info_of_school_3 .school_img_3{
+        width: 350px;
+        height: 200px;
+    }
+
+    .info_of_school .school_text,
+    .info_of_school_2 .school_text_2,
+    .info_of_school_3 .school_text_3{
+        font-size: 11px;
+        top: -50px;
+        padding: 20px;
+    }
+    .menu{
+        width: 40%;
+        left: 32%;
+    }
+    .about_us{
+        top: 100%;
+    }
+    .about_us .about_us_test h2{
+        top: -350px;
+        left: -75px;
+    }
+    .info_of_school{
+        top: 125%;
+        left: 300px;
+    }
+    .info_of_school .school_img,
+    .info_of_school_2 .school_img_2,
+    .info_of_school_3 .school_img_3{
+        width: 400px;
+        height: 250px;
+    }
+    .info_of_school .school_text,
+    .info_of_school_2 .school_text_2,
+    .info_of_school_3 .school_text_3{
+        font-size: 17px;
+    }
+    .info_of_school_2{
+        top: 155%;
+        left: 300px;
+    }
+    .info_of_school_3{
+        top: 185%;
+        left: 300px;
+    }
+    .slider_glav{
+        left: 400px;
+        top: 2300px;
+    }
+    .penguin {
+      width: 200px;
+      height: 200px;
+      top: -2200px;
+    }
+    .footer_glav{
+        top: 2900px;
+    }
+    .footer_colum{
+        line-height: 30px;
+        left: 450px;
+    }
+    .footer_first_colum{
+        display: inline-block;
+        position: absolute;
+        left: 200px;
+    }
+    .footer_second_colum{
+        display: inline-block;
+        left: 300px;
+    }
+    .footer_name_strong{
+        font-size: 13px;
+    }
+    .footer_name_no_strong{
+        font-size: 15px;
+        top: -10px;
+    }
+
+}
+
+@media screen and (max-width: 1366px) {
+	.programa_director_information{
+		width: 250%;	
+	}
+	.programa_director_information p{
+		font-size: 12px;
+	}
+	.img_button{
+		top: 500px;	
+		left: 325px;
+	}
+	.select_class_button{
+		top: 700px;
+		left: 190px;
+	}
+	table{
+		width: 50%;
+		left: -75px;
+	}
+	.menu{
+		left: 400px;
+	}
+	.about_us{
+		top: 1150px;
+	}
+	.about_us_test{
+		position: relative;
+		width: 90%;
+		left: 25px;
+	}
+	.info_of_school,
+	.info_of_school_2,
+	.info_of_school_3{
+		top: 1400px;
+	}
+	
+	.info_of_school_2{
+		top: 1700px;
+		left: 28	0px;
+	}
+
+	.info_of_school_3{
+		top: 2000px;
+	}
+	.teachers_consist_list{
+		left: 500px;
+	}
+	.teachers{
+		top: 1900px;
+	}
+	.upr_school{
+		top: 1850px;
+		left: 500px;
+	}
+	.director{
+		top: 2000px;
+		left: 200px;
+	}
+	.teachers_last_news{
+		top: 2600px;
+		left: 500px;
+	}
+	.teachers_news_slider{
+		top: 2650px;
+		left: 600px;
+	}
+	.footer_teachers{
+		top: 3500px;
+	}
+	.news_zag{
+		left: 650px;
+	}
+	.news_first_page,
+	.news_second_page,
+	.news_third_page{
+		left: -50px;
+	}
+	.slider{
+		left: 575px;
+	}
+	.container_teachers_information_biography{
+		left: 650px;
+	}
+}
+
+@media screen and (max-width: 1320px) {
+    .header .news,
+    .header .feedback,
+    .header .home {
+            left: -150px;
+        }
+
+    .header nav ul li a{
+        /*left: -165%;
+        font-size: 21px;*/
+        left: -150px;
+        padding: 7px;
+        font-size: 18px;
+        margin: 30px;
+    }
+    .news_zag {
+        font-size: 40px;
+        top: 200px;
+        left: 575px;
+    }
+
+    .background_news_2{
+        height: 1500px;
+    }
+    /*Ее вообще нет при full hd*/
+
+    .news_first_page{
+        left: 0px;
+        top: -3100px;
+    }
+
+    .container_news .news_02{
+        top: 880px;
+    }
+
+    .container_news .news_03{
+        top: 1330px;
+    }
+
+    .container_news .news_04{
+        top: 1780px;
+    }
+
+    .container_news .news_05{
+        top: 2230px;
+    }
+
+    .container_news .news_image{
+        width: 350px;
+        height: 350px;
+    }
+
+    .container_news .news_list{
+        font-size: 13px;
+        width: 15%;
+        padding: 2px 2px
+    }
+
+    .container_news .news_data{
+        font-size: 15px
+    }
+
+    .container_news .news_name{
+        font-size: 30px;
+    }
+
+    .container_news .news_opis{
+        font-size: 14px;
+        line-height: 18px;
+        width: 450px;
+    }
+    button{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        top: -200px;
+        left: -50px;
+    }
+
+    .footer_news_block{
+        top: 3000px;
+    }
+    /*Блок о каждой новости*/
+
+    /*О каждой новости*/
+    .news_infomation_name{
+        font-size: 20px;
+    }
+
+    .news_infomation_dispec{
+        color: gray;
+    }
+
+    .news_information_event_name{
+        font-size: 22px;
+    }
+
+    .news_information_event_texts{
+        font-size: 15px;
+    }
+
+    .container_news_information{
+        font-size: 15px;
+    }
+
+    .news_photo{
+        font-size: 30px;
+        top: 125%;
+        left: 45%;
+    }
+
+    .container_news_information_event{
+        position: absolute;
+        left: 64%;
+        top: 27%;
+        line-height: 25px;
+    }
+    .slider .item img {
+        width: 80%;
+    }
+    .slider .prev, .slider .next {
+        top: 65%;
+    }
+    .slider .next {
+        right: 20%;
+        border-radius: 3px 0 0 3px;
+    }
+    .news_photo{
+        font-size: 30px;
+        top: 150%;
+        left: 550px;
+    }
+    .slider{
+        left: 500px;
+        top: 1000px;
+    }
+    .teachers{
+        position: absolute;
+        top: 310%;
+    }
+    .teachers_consist_list{
+        left: 500px;
+        font-size: 35px;
+    }
+    .teachers_name_no_strong{
+        font-size: 18px;
+    }
+    .teachers_name_strong{
+        font-size: 20px;
+    }
+    .teachers_second_line{
+        top: -1175px;
+    }
+    .teachers_third_line{
+        top: -725px;
+    }
+    .upr_school{
+        font-size: 35px;
+        left: 500px;
+        top: 270%;
+    }
+    .director{
+        top: 290%;
+        left: 230px;
+    }
+    .teachers_last_news{
+        top: 360%;
+        left: 600px;
+        font-size: 45px;
+    }
+    .director_contaks{
+        left: 300px;
+    }
+    .director .director_strong{
+        font-size: 20px;
+    }
+    .director_no_strong{
+        font-size: 15px;
+    }
+    .director_information{
+        left: 600px;
+        width: 150%;
+        font-size: 15px;
+    }
+    .btn{
+        top: 30%;
+    }
+    .director_images{
+        width: 130%;
+        left: -100px;
+    }
+    .teachers_news_slider{
+        top: 365%;
+        left: 550px;
+    }
+    .teachers_last_news{
+        top: 370%;
+        left: 500px;
+        font-size: 35px;
+    }
+    .footer_teachers{
+        top: 2900px;
+    }
+    .background_teachers_1{
+        height: 900px;
+    }
+    .container_teachers_information{
+        left: 500px;
+        font-size: 14px;
+    }
+    .teachers_infomation_name,
+    .teachers_infomation_predmet{
+        font-size: 22px;
+    }
+    .container_teachers_information_biography{
+        left: 550px;
+    }
+    .teachers_information_biography_texts{
+        font-size: 12px;
+    }
+    .container .container_teachers_information_biography{
+        width: 40%;
+    }
+    .teachers_enother_texts{
+        font-size: 35px;
+    }
+    .footer_teachers_information{
+        top: 1300px;
+    }
+    .background_teachers_information{
+        height: 1300px;
+    }
+    .teachers_enother_name{
+        font-size: 18px;
+    }
+    .teachers_enother_predmet{
+        font-size: 15px;
+    }
+    /*Главная*/
+    .background_glav_2{
+        height: 300px;
+    }
+    .about_us{
+        top: 170%;
+        left: 400px;
+    }
+    .about_us .about_us_test h2{
+        left: -45px;
+        max-width: 70%;
+        font-size: 20px;
+    }
+    .arrow-8{
+        width: 60px;
+        height: 60px;
+    }
+    .info_of_school{
+        top: 220%;
+        left: 20%;
+    }
+
+    .info_of_school .school_img,
+    .info_of_school_2 .school_img_2,
+    .info_of_school_3 .school_img_3{
+        width: 400px;
+        height: 250px;
+    }
+
+    .info_of_school .school_text,
+    .info_of_school_2 .school_text_2,
+    .info_of_school_3 .school_text_3{
+        font-size: 15px;
+        top: -80px;
+    }
+    .menu{
+        width: 57.5%;
+        left: 24%;
+    }
+    .info_of_school{
+        left: 300px;
+        top: 200%;
+    }
+    .info_of_school_2{
+        left: 280px;
+        top: 260%;
+    }
+    .info_of_school_3{
+        left: 300px;
+        top: 320%;
+    }
+    .penguin {
+      width: 200px;
+      height: 200px;
+      top: -1825px;
+    }
+    .slider_glav{
+        display: none;
+    }
+    .footer_glav{
+        height: 150px;
+        top: 2500px;
+    }
+    .programa_director .programa_director_information{
+        max-width: 180%;
+        top: 7%;
+        font-size: 12px;
+    }
+    .programa_director .programa_director_information p{
+        line-height: 20px;
+    }
+    .img_button{
+        left: 280px;
+        top: 150%;
+    }
+    .first_button{
+        top: 640px;
+        left: 30px;
+    }
+    .select_class_button{
+        left: 180px;
+        top: 630px;
+    }
+    .programa_director{
+        left: 325px;
+    }
+    table{
+        width: 60%;
+        top: 200%;
+        left: -130px;
+    }
+    .background_programa_2{
+        height: 400px;
+    }
+    #footer_programa{
+        top: 1600px;
+    }
+} /*150%*/
+
+@media screen and (max-width: 1200px) {
+    .header .news,
+    .header .feedback,
+    .header .home {
+            left: -160px;
+        }
+
+    .header nav ul li a{
+        /*left: -165%;
+        font-size: 21px;*/
+        left: -160px;
+        padding: 7px;
+        font-size: 15px;
+        margin: 20px;
+    }
+    /*Главная*/
+    .background_glav_2{
+        height: 0px;
+    }
+    .about_us{
+        top: 180%;
+        left: 350px;
+    }
+    .about_us .about_us_test h2{
+        top: -300px;
+        left: -100px;
+        max-width: 80%;
+        font-size: 19px;
+    }
+    .arrow-8{
+        width: 50px;
+        height: 50px;
+        top: 70%;
+    }
+
+    .info_of_school .school_img,
+    .info_of_school_2 .school_img_2,
+    .info_of_school_3 .school_img_3{
+        width: 350px;
+        height: 200px;
+    }
+
+    .info_of_school .school_text,
+    .info_of_school_2 .school_text_2,
+    .info_of_school_3 .school_text_3{
+        font-size: 11px;
+        top: -50px;
+        padding: 20px;
+    }
+    .menu{
+        width: 57.5%;
+        left: 24%;
+    }
+    .info_of_school,
+    .info_of_school_3{
+        left: 200px;
+    }
+    .info_of_school_2{
+        left: 180px;
+    }
+    .penguin {
+      width: 170px;
+      height: 170px;
+      top: -1525px;
+    }
+    .footer_glav{
+        top: 2100px;
+    }
+    .footer_colum{
+        line-height: 30px;
+        left: 450px;
+    }
+    .footer_first_colum{
+        display: inline-block;
+        position: absolute;
+        left: 200px;
+    }
+    .footer_second_colum{
+        display: inline-block;
+        left: 300px;
+    }
+    .footer_name_strong{
+        font-size: 13px;
+    }
+    .footer_name_no_strong{
+        font-size: 15px;
+        top: -10px;
+    }
+    .programa_director .programa_director_information{
+        max-width: 180%;
+        top: 9%;
+        font-size: 10px;
+    }
+    .programa_director .programa_director_information p{
+        line-height: 18px;
+    }
+    .img_button{
+        width: 25%;
+        left: 280px;
+        top: 150%;
+    }
+    .first_button{
+        top: 580px;
+        left: 60px;
+    }
+    .select_class_button{
+        left: 160px;
+        top: 570px;
+    }
+    .programa_director{
+        left: 225px;
+    }
+    table{
+        width: 60%;
+        top: 200%;
+        left: -120px;
+    }
+    .background_programa_2{
+        height: 200px;
+    }
+    #footer_programa{
+        top: 1400px;
+        height: 120px;
+    }
+@media screen and (max-width: 1024px) {
+    .header .news,
+    .header .feedback,
+    .header .home {
+            left: -150px;
+        }
+
+    .header nav ul li a{
+        /*left: -165%;
+        font-size: 21px;*/
+        left: -150px;
+        padding: 7px;
+        font-size: 15px;
+        margin: 15px;
+    }
+    /*Главная*/
+    .background_glav_2{
+        height: 0px;
+    }
+    .about_us{
+        top: 180%;
+        left: 350px;
+    }
+    .about_us .about_us_test h2{
+        top: -300px;
+        left: -100px;
+        max-width: 80%;
+        font-size: 19px;
+    }
+    .arrow-8{
+        width: 60px;
+        height: 60px;
+        top: 30%;
+    }
+
+    .info_of_school .school_img,
+    .info_of_school_2 .school_img_2,
+    .info_of_school_3 .school_img_3{
+        width: 350px;
+        height: 200px;
+    }
+
+    .info_of_school .school_text,
+    .info_of_school_2 .school_text_2,
+    .info_of_school_3 .school_text_3{
+        font-size: 11px;
+        top: -50px;
+        padding: 20px;
+    }
+    .menu{
+        width: 55%;
+        left: 26%;
+    }
+    .about_us{
+        top: 80%;
+    }
+    .about_us .about_us_test h2{
+        top: -300px;
+        left: -110px;
+    }
+    .info_of_school{
+        top: 100%;
+        left: 200px;
+    }
+    .info_of_school .school_img,
+    .info_of_school_2 .school_img_2,
+    .info_of_school_3 .school_img_3{
+        width: 350px;
+        height: 200px;
+    }
+    .info_of_school .school_text,
+    .info_of_school_2 .school_text_2,
+    .info_of_school_3 .school_text_3{
+        font-size: 15px;
+    }
+    .info_of_school_2{
+        top: 130%;
+        left: 200px;
+    }
+    .info_of_school_3{
+        top: 160%;
+        left: 200px;
+    }
+    .slider_glav{
+        left: 400px;
+        top: 2300px;
+    }
+    .penguin {
+      width: 150px;
+      height: 150px;
+      top: -1550px;
+    }
+    .footer_glav{
+        top: 2050px;
+    }
+    .news_zag{
+        left: 500px;
+    }
+    .news_name{
+        max-width: 60%;
+    }
+    .news_name p{
+        font-size: 12px;
+    }
+    .news_opis{
+        max-width: 70%;
+    }
+    .news_first_page{
+        left: -100px;
+    }
+    .news_data{
+        width: 50%;
+    }
+
+
+
+@media screen and (max-width: 768px) {
+    .header .news,
+    .header .feedback,
+    .header .home {
+        left: 0px;
+    }
+    .header nav ul li a{
+        /*left: -165%;
+        font-size: 21px;*/
+        left: 0px;
+        padding: 7px;
+        font-size: 15px;
+        margin: 15px;
+    }
+    .news_first_page,
+    .news_second_page,
+    .news_third_page{
+        left: -80px;
+        top: -3150px;
+    }
+    .news_zag{
+        left: 350px;
+        font-size: 30px;
+    }
+    .container_news .news_02{
+        top: 880px;
+    }
+
+    .container_news .news_03{
+        top: 1330px;
+    }
+
+    .container_news .news_04{
+        top: 1780px;
+    }
+
+    .container_news .news_05{
+        top: 2230px;
+    }
+
+    .container_news .news_image{
+        width: 250px;
+        height: 300px;
+    }
+
+    .container_news .news_list{
+        font-size: 12px;
+        width: 30%;
+        padding: 2px 2px
+    }
+
+    .news_data{
+        font-size: 13px
+    }
+
+    .container_news .news_name{
+        font-size: 30px;
+        width: 200%;
+    }
+
+    .container_news .news_opis{
+        font-size: 11px;
+        line-height: 18px;
+        width: 350px;
+        max-width: 200%;
+    }
+    .container_news .news_texts{
+        width: 100%;
+    }
+    button{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        top: -350px;
+        left: 0px;
+    }
+    .footer_first_contaks{
+        left: 50px;
+    }
+    .footer_colum{
+        position: relative;
+        left: 300px;
+        width: 300px;
+    }
+    }
+    .footer_news_block{
+        top: 3000px;
+    }
+    /*Блок о каждой новости*/
+
+    /*О каждой новости*/
+    .news_info_img{
+        top: 150px;
+        width: 300px;
+        height: 500px;
+        left: 100px;
+    }
+    .container_news_information{
+        display: none;
+        /*font-size: 13px;
+        top: 200px;
+        left: 160px;*/
+    }
+    .container_news_information_event{
+        width: 50%;
+        top: 150px;
+        left: 450px;
+    }
+    .news_photo{
+        display: none;
+    }
+    .slider{
+        top: 800px;
+        left: 450px;
+    }
+    .background_news_information{
+        height: 1400px;
+    }
+    .footer_news_information_block{
+        top: 1400px;
+    }
+    .teachers_consist_list{
+        left: 350px;
+    }
+    .teachers{
+        top: 2000px;
+    }
+    .teachers_second_line{
+        top: -1250px;
+    }
+    .teachers_third_line{
+        top: -875px;
+    }
+    .teachers_name_no_strong{
+        font-size: 15px;
+    }
+    .teachers_name_strong{
+        font-size: 17px;
+    }
+    .upr_school{
+        left: 350px;
+        top: 1750px;
+    }
+    .director{
+        top: 1900px;
+    }
+    .director_contaks{
+        top: 30px;
+        left: 200px;
+    }
+    .director_information{
+        left: 450px;
+        top: 30px;
+    }
+    .no_tablet_information{
+        display: none;
+    }
+    .tablet_more_information{
+        display: block;
+    }
+    .tablet_many_information{
+        display: none;
+    }
+    .more_button{
+        border-radius: 25px;
+        width: 40%;
+        font-size: 13px;
+        background: orange;
+        color: white;
+        top: -15px;
+        left: 70px;
+    }
+    .many_button{
+        border-radius: 25px;
+        width: 40%;
+        font-size: 13px;
+        background: orange;
+        color: white;
+        top: 5px;
+        left: 70px;
+    }
+    .teachers_last_news{
+        left: 350px;
+        top: 2600px;
+    }
+    .teachers_news_slider{
+        top: 2600px;
+        left: 400px;
+    }
+    .background_teachers_1{
+        height: 1500px;
+    }
+    .footer_teachers{
+        top: 3500px;
+    }
+    .teachers_info_img{
+        left: 60px;
+        top: 200px;
+        width: 250px;
+        height: 400px;
+    }
+    .container_teachers_information{
+        left: 360px;
+        top: 250px;
+    }
+    .container_teachers_information_biography{
+        left: 380px;
+        top: 200px;
+    }
+    .teachers_enother_texts{
+        top: 850px;
+        left: 400px;
+    }
+    .teachers_enother{
+        top: 950px;
+    }
+    .footer_teachers_information{
+        top: 1400px;
+    }
+    .background_teachers_information{
+        height: 1400px;
+    }
+    .menu{
+        width: 55.5%;
+        left: 235px;
+        display: block;
+    }
+    .arrow-8{
+        display: none;
+    }
+    .about_us{
+        top: 850px;
+    }
+    .info_of_school{
+        top: 1000px;
+        left: 125px;
+    }
+    .info_of_school_2{
+        top: 1300px;
+        left: 105px;
+    }
+    .info_of_school_3{
+        top: 1600px;
+        left: 125px;
+    }
+    .programa_director{
+        top: 150px;
+    }
+    .programa_director_images{
+        width: 250px;
+        height: 400px;
+    }
+    .programa_director_information{
+        left: 300px;
+    }
+    .programa_director_information p{
+        font-size: 13px;
+    }
+    .programa_director{
+        left: 200px;
+    }
+    .pinquino{
+        display: none;
+    }
+    .first_button{
+        top: 700px;
+    }
+    .select_class_button{
+        top: 650px;
+    }
+    .select_class_button button{
+        font-size: 16px;
+        padding: 5px;
+    }
+    table{
+        top: 550px;
+        left: -150px;
+    }
+    .background_programa_1{
+        height: 1400px;
+    }
+    #footer_programa{
+        top: 1500px;
+    }
+    .footer_feedback{
+        height: 150px;
+        top: 1300px;
+    }
+    .footer_colum{
+        top: 5px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .news_zag{
+        font-size: 20px;
+        left: 150px;
+        display: none;
+    }
+    .container_news .news_image{
+        width: 180px;
+        height: 200px;
+        border-radius: 30px;
+        left: 120px;
+    }
+
+    .container_news .news_list{
+        font-size: 12px;
+        width: 40%;
+        padding: 2px 2px;
+        position: relative;
+        top: -60px;
+        left: -20px;
+        display: none;
+    }
+    .container_news .news_texts{
+        left: 140px;
+    }
+
+    .container_news .news_name{
+        font-size: 25px;
+        position: relative;
+        top: -140px;
+        left: 80px;
+        text-align: center;
+    }
+    .container_news .news_data{
+        position: relative;
+        top: -30px;
+        left: 110px;
+    }
+    .container_news .news_opis{
+        display: none;
+    }
+    .container_news .news_texts{
+        width: 150%;
+        left: 50px;
+    }
+    .container_news .news_01{
+        top: 1100px;
+    }
+    .container_news .news_02{
+        top: 1450px;
+    }
+    .container_news .news_03{
+        top: 1800px;
+    }
+    .container_news .news_04{
+        top: 2150px;
+    }
+    .container_news .news_05{
+        top: 2500px;
+    }
+    .container_news .news_page{
+        top: 0px;
+        left: 110px;
+        width: 50%;
+    }
+    .background_news_1{
+        height: 700px;
+    }
+    .background_news_3{
+        height: 0px;
+    }
+    .footer_news_block{
+        position: relative;
+        top: -20px;
+        height: 100px;
+    }
+    .footer_colum{
+        font-size: 10px;
+        line-height: 18px;
+        padding: 10px;
+        left: 10px;
+    }
+    .footer_name_strong{
+        font-size: 10px;
+    }
+    .footer_name_no_strong{
+        font-size: 12px;
+        top: -15px;
+        width: 50%;
+        height: 30px;
+    }
+    .footer_email{
+        position: relative;
+        left: -25px;
+    }
+    .footer_first_contaks{
+        top: 10px;
+        left: 20px;
+    }
+    .footer_first_colum{
+        width: 40%;
+        height: 65px;
+    }
+    .footer_second_colum{
+        position: relative;
+        left: 300px;
+        width: 30%;
+    }
+    .header .news,
+    .header .feedback,
+    .header .home{
+        left: -30px;
+    }
+
+
+    .header nav ul li a{
+        left: -30px;
+        padding: 3px;
+        margin: 8px;
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .header .news,
+    .header .feedback,
+    .header .home{
+        left: 0px;
+    }
+    .header nav ul li a{
+        left: 0px;
+    }
+    .footer_news_block{
+        position: relative;
+        top: -20px;
+        height: 100px;
+    }
+    .footer_colum{
+        font-size: 8px;
+        left: -30px;
+        top: 15px;
+    }
+    .footer_name_strong{
+        font-size: 8px;
+    }
+    .footer_name_no_strong{
+        font-size: 9px;
+    }
+    .footer_email{
+        left: -35px;
+    }
+    .footer_first_contaks{
+        top: 20px;
+        left: 20px;
+    }
+    .footer_first_colum{
+        width: 40%;
+        height: 65px;
+    }
+    .footer_second_colum{
+        position: relative;
+        left: 300px;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .header .news,
+    .header .feedback,
+    .header .home{
+        left: 5px;
+    }
+    .header nav ul li a{
+        left: 5px;
+        font-size: 7px;
+        margin: 5px;
+    }
+    .footer_news_block{
+        position: relative;
+        top: -20px;
+        height: 100px;
+    }
+    .footer_colum{
+        font-size: 8px;
+        left: -55px;
+        top: 15px;
+    }
+    .footer_email{
+        left: -45px;
+    }
+    .footer_first_contaks{
+        top: 20px;
+        left: 10px;
+    }
+    .footer_first_colum{
+        width: 40%;
+        height: 65px;
+    }
+    .footer_second_colum{
+        left: 280px;
+    }
+    .container_news .news_01,
+    .container_news .news_02,
+    .container_news .news_03,
+    .container_news .news_04,
+    .container_news .news_05{
+        left: 25px;
+    }
+    .container_news .news_page{
+        left: 75px;
+    }
+}
+
+
+
+/*
+
+/*.info_of_school2 .school_img2{
+    display: inline-block;
+    width: 600px;
+    height: 400px;
+}
+
+.info_of_school2 .school_text2{
+    display: inline-block;
+    font-size: 25px;
+    max-width: 88%;
+    padding: 80px;
+    position: relative;
+    top: -100px;
+}*/
+
+
+
+
+/*.container .hello{
+    position: relative;
+    top: -150%;
+    text-align: center;
+    left: 15%;
+    font-size: 60px;
+    max-width: 70%;
+}*/
